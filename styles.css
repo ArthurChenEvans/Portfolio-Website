@@ -10,22 +10,19 @@
 
 @layer theme {
     :root {
-        --primary-colour: #439775;
-        --secondary-colour: #48BF84;
-        --highlight-colour: #61D095;
-        --accent-colour: #E0BAD7;
-        --shadow-colour: #2A4747;
+        --primary: #31572C;
+        --secondary: #4F772D;
+        --accent: #90A955;
 
-        --text-dark: black;
-        --text-light: white;
-        --text-muted: #494949;
+        --text-dark: #132A13;
+        --text-light: #ECF39E;
     }
 }
 
 @layer base {
     body {
         font-family: 'Inter Variable', sans-serif;
-        background-color: var(--primary-colour);
+        background-color: var(--primary);
     }
 
     nav {
@@ -33,7 +30,8 @@
         padding: 2rem;
         justify-content: center;
         align-items: center;
-        background-color: var(--secondary-colour);
+        background-color: var(--secondary);
+        color: var(--text-light)
     }
 
     footer {
@@ -42,7 +40,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--secondary-colour);
+        background-color: var(--secondary);
+        color: var(--text-light);
         position: absolute;
         bottom: 0;
 
@@ -58,7 +57,7 @@
             & a {
                 font-size: 1.3rem;
                 text-decoration: none;
-                color: var(--text-dark);
+                color: var(--text-light);
             }
 
             & li {
@@ -73,11 +72,11 @@
 
         & .copyright {
             width: 100%;
-            background-color: var(--shadow-colour);
+            background-color: var(--accent);
             padding: 1rem;
             text-align: center;
             margin-top: 1rem;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
     }
 }
