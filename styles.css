@@ -14,8 +14,10 @@
     --secondary: #4F772D;
     --accent: #90A955;
 
+    --text-muted: #ccd190;
     --text-dark: #132A13;
     --text-light: #ECF39E;
+    --text-strong: #f9fcd7;
   }
 }
 
@@ -122,11 +124,15 @@
     }
 
     & span {
-      opacity: 0.6;
+      color: var(--text-muted);
     }
 
     & p {
       margin-top: 1rem;
+    }
+
+    & strong {
+      color: var(--text-strong);
     }
 
     & figure {
