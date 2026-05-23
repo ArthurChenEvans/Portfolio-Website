@@ -25,6 +25,12 @@
   body {
     font-family: 'Inter Variable', sans-serif;
     background-color: var(--primary);
+
+    & main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   footer {
@@ -34,8 +40,6 @@
     justify-content: center;
     align-items: center;
     color: var(--text-light);
-
-
 
     & .contacts-section {
       width: 100%;
@@ -72,7 +76,8 @@
     & .info-section {
       background-color: var(--primary);
       width: 100%;
-      padding: 1rem;
+      max-width: 80ch;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -99,40 +104,39 @@
 }
 
 @layer components {
-  .hero {
+  .hero-section {
     padding: 2rem;
-    width: 100vw;
+    max-width: 120ch;
+    color: var(--text-light);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    color: var(--text-light);
 
-    & div:first-of-type {
+    & .hero-content {
       width: 100%;
       max-width: 80ch;
+
+      & h2 {
+        margin-top: 1rem;
+      }
+
+      & span {
+        color: var(--text-muted);
+      }
+
+      & p {
+        margin-top: 1rem;
+      }
+
+      & strong {
+        color: var(--text-strong);
+      }
     }
 
-    & div:last-of-type {
-      width: fit-content;
-      max-width: 400px;
-      flex-shrink: 0;
-    }
-
-    & h2 {
-      margin-top: 1rem;
-    }
-
-    & span {
-      color: var(--text-muted);
-    }
-
-    & p {
-      margin-top: 1rem;
-    }
-
-    & strong {
-      color: var(--text-strong);
+    & .hero-figure {
+      width: 100%;
+      max-width: 40ch;
     }
 
     & figure {
@@ -144,37 +148,42 @@
       border-radius: 12px;
       border: solid var(--accent) 4px;
       width: 100%;
-      height: auto;
+      max-width: 40ch;
       aspect-ratio: 1/1;
     }
+
   }
 
   .project-display {
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     background-color: var(--accent);
+    gap: 1rem;
 
   }
 
   .project-container {
-    padding: 1rem;
+    max-width: 120ch;
+    padding: 0 2rem;
     display: flex;
-    border-bottom: 2px solid var(--secondary);
 
     & img {
       object-fit: cover;
       border-radius: 12px;
-      width: clamp(300px, 350px, 400px);
+      width: 40ch;
     }
 
     & .project-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 6px 1rem;
+      padding-left: 1rem;
+      width: 100%;
+      max-width: 80ch;
       color: var(--text-dark);
 
       & ul {
@@ -209,42 +218,45 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-
-    & div:last-child {
-      justify-self: center;
-      width: min(400px, 100%);
-      margin-top: 2rem;
-    }
-  }
-}
-
 @media (max-width: 768px) {
+
+  .hero-section,
+  .project-display {
+    padding: 2rem;
+  }
+
+  .project-display {
+    gap: 2rem;
+  }
+
+  .hero-section,
   .project-container {
-    border-bottom: 2px solid var(--secondary);
     flex-direction: column;
+  }
 
-    & img {
-      border-radius: 12px;
-      width: 75%;
-      margin: 1rem auto;
-    }
+  .project-container {
+    padding: 0;
+  }
 
-    & .project-info {
-      align-items: center;
-      text-align: center;
+  .project-container img {
+    margin: auto;
+    border-radius: 12px;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
 
-      & ul {
-        justify-content: center;
-      }
+  .project-info {
+    align-items: center;
+    text-align: center;
+
+    & ul {
+      justify-content: center;
     }
   }
 }
 
 @media (max-width: 480px) {
   .project-container img {
-    width: calc(100vw - 1rem);
+    width: calc(100% - 1rem);
   }
 }
