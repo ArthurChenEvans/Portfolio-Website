@@ -27,7 +27,7 @@
     font-family: 'Inter Variable', sans-serif;
     background-color: var(--primary);
 
-    & main {
+    main {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -49,25 +49,25 @@
       background-color: var(--secondary);
       text-align: center;
 
-      & .contacts-content {
-        & span:nth-of-type(odd) {
+      .contacts-content {
+        span:nth-of-type(odd) {
           display: block;
           font-size: 1.5rem;
           font-weight: bold;
         }
 
-        & span:last-of-type {
+        span:last-of-type {
           padding-bottom: 1rem;
         }
 
-        & ul {
+        ul {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 1rem;
           list-style: none;
 
-          & a {
+          a {
             font-size: 1.3rem;
             text-decoration: none;
             color: var(--text-light);
@@ -76,7 +76,7 @@
             border-radius: 20rem;
           }
 
-          & a:hover {
+          a:hover {
             background-color: var(--text-light);
             color: var(--text-dark);
             transition: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -87,7 +87,7 @@
 
 
 
-    & .info-section {
+    .info-section {
       background-color: var(--primary);
       width: 100%;
       max-width: 80ch;
@@ -96,17 +96,17 @@
       flex-direction: column;
       align-items: center;
 
-      & .info-text {
+      .info-text {
         width: min(100%, 80ch);
 
-        & p:nth-of-type(2),
+        p:nth-of-type(2),
         p:last-of-type {
           margin-top: 1rem;
         }
       }
     }
 
-    & .copyright {
+    .copyright {
       width: 100%;
       background-color: var(--accent);
       padding: 1rem;
@@ -128,38 +128,38 @@
     gap: 1rem;
     animation: fadeIn 0.5s ease-out both;
 
-    & .hero-content {
+    .hero-content {
       width: 100%;
       max-width: 80ch;
 
-      & h2 {
+      h2 {
         margin-top: 1rem;
       }
 
-      & span {
+      span {
         color: var(--text-muted);
       }
 
-      & p {
+      p {
         margin-top: 1rem;
       }
 
-      & strong {
+      strong {
         color: var(--text-strong);
       }
     }
 
-    & .hero-figure {
+    .hero-figure {
       width: 100%;
       max-width: 40ch;
     }
 
-    & figure {
+    figure {
       width: 100%;
       margin: 0;
     }
 
-    & img {
+    img {
       border-radius: 12px;
       border: solid var(--accent) 4px;
       width: 100%;
@@ -188,13 +188,13 @@
     padding: 0 2rem;
     display: flex;
 
-    & img {
+    img {
       object-fit: cover;
       border-radius: 6px;
       width: 40ch;
     }
 
-    & .project-info {
+    .project-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -203,14 +203,14 @@
       max-width: 80ch;
       color: var(--text-dark);
 
-      & ul {
+      ul {
         margin-top: 1rem;
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
         list-style: none;
 
-        & .project-pill {
+        .project-pill {
           background-color: var(--primary);
           color: var(--text-light);
           width: fit-content;
@@ -219,7 +219,7 @@
         }
       }
 
-      & a {
+      a {
         width: fit-content;
         display: flex;
         gap: 4px;
@@ -281,7 +281,7 @@
     align-items: center;
     text-align: center;
 
-    & ul {
+    ul {
       justify-content: center;
     }
   }
